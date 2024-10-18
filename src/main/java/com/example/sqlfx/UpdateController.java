@@ -43,8 +43,30 @@ public class UpdateController {
         this.sceneSwitcher=new HelloController();
     }
 
-    public void onCreate(ActionEvent actionEvent) {
-        sceneSwitcher.changeSceneToAnother("update-view.fxml",updatePageLabel);
+    public void onCreate(ActionEvent actionEvent) throws SQLException {
+        String name=nameField.getText();
+        String rank=rankField.getText();
+        String location=locationField.getText();
+        int Id;
+        try {
+            Id= parseInt(idField.getText());
+        }
+        catch (Exception e){
+            System.out.println("Not a num so id is now 100");
+            Id=100;
+        }
+
+        University myUni=new University(Id,name,parseInt(rank),location);
+
+        DAO conn =new DAO();
+
+        conn.createUniversity(myUni);
+        conn.closeConnection();
+
+//       to reload the page
+        onRead();
+
+
     }
 
     public void onUpdate(ActionEvent actionEvent) throws SQLException {
@@ -78,6 +100,6 @@ onRead();
     }
 
     public void onDelete(ActionEvent actionEvent) {
-        sceneSwitcher.changeSceneToAnother("delete-view.fxml",updatePageLabel);
+        sceneSwitcher.changeSceneToAnother("delete-view.fxml");
     }
 }

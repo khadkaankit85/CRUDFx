@@ -80,7 +80,7 @@ public class HelloController {
 
 
 
-    public void changeSceneToAnother(String fxmlName,Label refToTable) {
+    public void changeSceneToAnother(String fxmlName) {
         try {
             Parent secondScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlName)));
             Stage secondStage = new Stage();
@@ -96,14 +96,14 @@ public class HelloController {
     }
 
     public void onCreate() {
-        changeSceneToAnother("update-view.fxml",crudPageLabel);
+        changeSceneToAnother("update-view.fxml");
     }
 
     public void onUpdate() {
-        changeSceneToAnother("update-view.fxml",crudPageLabel);
+        changeSceneToAnother("update-view.fxml");
     }
 
     public void onDelete() {
-        changeSceneToAnother("delete-view.fxml",crudPageLabel);
+        changeSceneToAnother("delete-view.fxml");
     }
 }

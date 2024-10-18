@@ -15,7 +15,7 @@
     </padding>
    <Pane prefHeight="602.0" prefWidth="946.0">
       <children>
-         <Label layoutX="394.0" layoutY="14.0" prefHeight="24.0" prefWidth="129.0" text="CRUD " fx:id="updatePageLabel" />
+         <Label layoutX="394.0" layoutY="14.0" prefHeight="24.0" prefWidth="129.0" text="Update and Create " fx:id="updatePageLabel" />
          <TableView layoutX="-4.0" layoutY="296.0" prefHeight="298.0" prefWidth="916.0" fx:id="myTable">
            <columns>
              <TableColumn fx:id="idCol" prefWidth="225.0" text="ID" />
