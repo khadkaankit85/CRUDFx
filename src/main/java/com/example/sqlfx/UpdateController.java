@@ -100,6 +100,6 @@ onRead();
     }
 
     public void onDelete(ActionEvent actionEvent) {
-        sceneSwitcher.changeSceneToAnother("delete-view.fxml");
+        sceneSwitcher.changeSceneToAnother("delete-view.fxml",updatePageLabel);
     }
 }

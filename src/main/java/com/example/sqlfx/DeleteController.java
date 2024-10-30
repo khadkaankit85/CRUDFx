@@ -34,14 +34,15 @@ public class DeleteController {
 
     public  DeleteController(){
          this.sceneSwitcher=new HelloController();
+
     }
 
     public void onCreate(ActionEvent actionEvent) {
-sceneSwitcher.changeSceneToAnother("hello-view.fxml");
+sceneSwitcher.changeSceneToAnother("hello-view.fxml",deletePageLabel);
     }
 
     public void onUpdate(ActionEvent actionEvent) {
-        sceneSwitcher.changeSceneToAnother("update-view.fxml");
+        sceneSwitcher.changeSceneToAnother("update-view.fxml",deletePageLabel);
     }
 
     public void onRead() throws SQLException {

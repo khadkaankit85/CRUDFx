@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -80,30 +81,36 @@ public class HelloController {
 
 
 
-    public void changeSceneToAnother(String fxmlName) {
+    public void changeSceneToAnother(String fxmlName, Node refElement) {
         try {
-            Parent secondScene = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlName)));
-            Stage secondStage = new Stage();
-            secondStage.setTitle("Haha");
-            secondStage.setScene(new Scene(secondScene));
-            secondStage.setFullScreen(true);
+            // Load the new scene's root element from FXML
+            Parent newSceneRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlName)));
 
+            // Get the current stage using the reference element
+            Stage currentStage = (Stage) refElement.getScene().getWindow();
 
-            secondStage.show();
+            // Set a consistent size for the new scene
+            Scene newScene = new Scene(newSceneRoot, 800, 600); // Set width and height here
+            currentStage.setScene(newScene);
+
+            currentStage.setTitle("Haha");
+            currentStage.show();
+
         } catch (IOException e) {
             System.out.println("Error loading scene: " + e.getMessage());
         }
     }
 
+
     public void onCreate() {
-        changeSceneToAnother("update-view.fxml");
+        changeSceneToAnother("update-view.fxml",crudPageLabel);
     }
 
     public void onUpdate() {
-        changeSceneToAnother("update-view.fxml");
+        changeSceneToAnother("update-view.fxml",crudPageLabel);
     }
 
     public void onDelete() {
-        changeSceneToAnother("delete-view.fxml");
+        changeSceneToAnother("delete-view.fxml",crudPageLabel);
     }
 }
