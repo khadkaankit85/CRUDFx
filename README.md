@@ -2,11 +2,13 @@
 
 ## Overview
 
-This is a JavaFX application that provides a simple CRUD (Create, Read, Update, Delete) interface to interact with a database. The application allows users to manage records, featuring a user-friendly interface built with JavaFX.
+This is a JavaFX application that provides a simple CRUD (Create, Read, Update, Delete) interface to interact with a MySQL database. The application allows users to manage records through a user-friendly interface built with JavaFX, implementing the Model-View-Controller (MVC) design pattern for better code organization.
 
 ## Features
 - User-friendly GUI for managing records.
 - Implemented CRUD operations for easy data manipulation.
+- User authentication using usernames and passwords stored in the MySQL database.
+- Utilizes the Data Access Object (DAO) pattern for efficient data management.
 
 ## Technologies Used
 
@@ -15,6 +17,7 @@ This is a JavaFX application that provides a simple CRUD (Create, Read, Update, 
 - CSS for styling
 - FXML for layout
 - MySQL database
+- DAO pattern for data handling
 - Maven for project management
 
 ## Installation
@@ -28,7 +31,7 @@ This is a JavaFX application that provides a simple CRUD (Create, Read, Update, 
    cd CRUDFx
    ```
 3. Open the project in your IDE (e.g., IntelliJ IDEA or Eclipse).
-4. Make sure you have JDK 21 installed.
+4. Ensure you have JDK 21 and MySQL installed.
 5. Run the application:
    ```bash
    mvn javafx:run
@@ -48,7 +51,11 @@ This is a JavaFX application that provides a simple CRUD (Create, Read, Update, 
 ## Usage
 
 - Launch the application.
-- Use the **Login Page** to authenticate.
-- Navigate through the application to perform CRUD operations.
+- Use the **Login Page** to authenticate with your credentials.
+- Navigate through the application to perform CRUD operations on records.
 - The **Delete Page** allows you to remove records from the database.
 
+## Learning Outcomes
+- Implementing CRUD operations using JavaFX and MySQL.
+- Utilizing the DAO pattern for structured data management.
+- Applying the MVC architecture for cleaner and maintainable code.
