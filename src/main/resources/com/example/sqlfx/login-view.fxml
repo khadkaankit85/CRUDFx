@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="628.0" prefWidth="956.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlfx.LoginPageController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <children>
-      <Pane prefHeight="400.0" prefWidth="914.0">
-         <children>
-            <TextField fx:id="usernameTextField" layoutX="181.0" layoutY="87.0" promptText="Your Username" />
-            <TextField fx:id="passwordTextField" layoutX="403.0" layoutY="87.0" promptText="Your Password" />
-            <Button layoutX="634.0" layoutY="87.0" mnemonicParsing="false" onAction="#onLoginButtonPress" text="Login" />
-            <Label fx:id="msgTextField" layoutX="361.0" layoutY="130.0" />
-            <Label fx:id="signinLabel" layoutX="425.0" layoutY="14.0" text="Log In" />
-         </children>
-      </Pane>
-   </children>
+<VBox alignment="CENTER" prefHeight="628.0" prefWidth="956.0" spacing="20.0" styleClass="primary-background" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlfx.LoginPageController">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="914.0" styleClass="pane">
+            <children>
+                <!-- User image -->
+                <ImageView fitHeight="100" fitWidth="100" layoutX="400" layoutY="30">
+                    <image>
+                        <Image url="https://img.icons8.com/?size=100&amp;id=fJ7hcfUGpKG7&amp;format=png&amp;color=000000" />
+                    </image>
+                </ImageView>
+
+                <!-- Username text field -->
+                <TextField fx:id="usernameTextField" layoutX="377.0" layoutY="174.0" promptText="Your Username" styleClass="input-field" />
+
+                <!-- Password field to hide input -->
+                <PasswordField fx:id="passwordTextField" layoutX="377.0" layoutY="215.0" promptText="Your Password" styleClass="input-field" />
+
+                <Button layoutX="432.0" layoutY="266.0" onAction="#onLoginButtonPress" styleClass="button" text="Login" />
+                <Label fx:id="msgTextField" layoutX="344.0" layoutY="130.0" prefHeight="36.0" prefWidth="228.0" styleClass="error-message" />
+                <Label fx:id="signinLabel" layoutX="425.0" layoutY="14.0" styleClass="label" />
+            </children>
+        </Pane>
+    </children>
 </VBox>

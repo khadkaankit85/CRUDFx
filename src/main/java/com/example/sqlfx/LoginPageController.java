@@ -36,7 +36,6 @@ public class LoginPageController {
 
     public void onLogOutButtonPress() {
         initialiseHelloController();
-
         newcon.changeSceneToAnother("login-view.fxml",loggedInLabel);
 
     }
@@ -61,7 +60,6 @@ public class LoginPageController {
 
                 if(userInputPassword.equals(password) && userInputUsername.equals(username)){
                     initialiseHelloController();
-
                     newcon.changeSceneToAnother("loggedin-view.fxml",signinLabel);
                 }
                 else{

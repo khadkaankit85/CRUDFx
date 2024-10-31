@@ -9,29 +9,29 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="628.0" prefWidth="956.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlfx.DeleteController">
+<VBox alignment="CENTER" styleClass="main-background" prefHeight="628.0" prefWidth="956.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlfx.DeleteController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Pane prefHeight="602.0" prefWidth="946.0">
-      <children>
-         <Label layoutX="394.0" layoutY="14.0" prefHeight="24.0" prefWidth="129.0" text="Delete Page " fx:id="deletePageLabel" />
-         <TableView layoutX="-4.0" layoutY="296.0" prefHeight="298.0" prefWidth="916.0" fx:id="myTable">
-           <columns>
-             <TableColumn fx:id="idCol" prefWidth="225.0" text="ID" />
-             <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="206.0" text="Name" />
-               <TableColumn fx:id="rankCol" prefWidth="215.0" text="Rank" />
-               <TableColumn fx:id="locationCol" prefWidth="269.0" text="Location" />
-           </columns>
-         </TableView>
-         <Label layoutY="6.0" prefHeight="24.0" prefWidth="66.0" text="Angkit Khadka" />
-         <Label layoutY="26.0" prefHeight="24.0" prefWidth="66.0" text="23058064" />
-         <Label layoutX="829.0" layoutY="9.0" text="Oct 18 2024" />
-         <Button layoutX="148.0" layoutY="217.0" mnemonicParsing="false" onAction="#onCreate" text="Create" />
-         <Button layoutX="459.0" layoutY="217.0" mnemonicParsing="false" onAction="#onUpdate" text="Update" />
-         <Button layoutX="294.0" layoutY="217.0" mnemonicParsing="false" onAction="#onRead" text="Read" />
-         <Button layoutX="636.0" layoutY="217.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
-         <TextField layoutX="343.0" layoutY="120.0" prefHeight="26.0" prefWidth="265.0" promptText="ID to delete from database"  fx:id="idField"/>
-      </children>
-   </Pane>
+    <Pane prefHeight="602.0" prefWidth="946.0">
+        <children>
+            <Label layoutX="394.0" layoutY="14.0" prefHeight="24.0" prefWidth="129.0" text="Delete Page" fx:id="deletePageLabel" styleClass="white-bg-text" />
+            <TableView layoutX="-4.0" layoutY="296.0" prefHeight="298.0" prefWidth="916.0" fx:id="myTable">
+                <columns>
+                    <TableColumn fx:id="idCol" prefWidth="225.0" text="ID" />
+                    <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="206.0" text="Name" />
+                    <TableColumn fx:id="rankCol" prefWidth="215.0" text="Rank" />
+                    <TableColumn fx:id="locationCol" prefWidth="269.0" text="Location" />
+                </columns>
+            </TableView>
+            <Label layoutY="6.0" prefHeight="24.0" prefWidth="66.0" text="Angkit Khadka" styleClass="white-bg-text" />
+            <Label layoutY="26.0" prefHeight="24.0" prefWidth="66.0" text="23058064" styleClass="white-bg-text" />
+            <Label layoutX="829.0" layoutY="9.0" text="Oct 18 2024" styleClass="white-bg-text" />
+            <Button layoutX="148.0" layoutY="217.0" mnemonicParsing="false" onAction="#onCreate" text="Create" />
+            <Button layoutX="459.0" layoutY="217.0" mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+            <Button layoutX="294.0" layoutY="217.0" mnemonicParsing="false" onAction="#onRead" text="Read" />
+            <Button layoutX="636.0" layoutY="217.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+            <TextField layoutX="343.0" layoutY="120.0" prefHeight="26.0" prefWidth="265.0" promptText="ID to delete from database" fx:id="idField"/>
+        </children>
+    </Pane>
 </VBox>

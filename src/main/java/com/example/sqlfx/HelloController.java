@@ -83,17 +83,17 @@ public class HelloController {
 
     public void changeSceneToAnother(String fxmlName, Node refElement) {
         try {
-            // Load the new scene's root element from FXML
             Parent newSceneRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlName)));
-
-            // Get the current stage using the reference element
             Stage currentStage = (Stage) refElement.getScene().getWindow();
 
-            // Set a consistent size for the new scene
-            Scene newScene = new Scene(newSceneRoot, 800, 600); // Set width and height here
-            currentStage.setScene(newScene);
+            Scene newScene = new Scene(newSceneRoot);
 
-            currentStage.setTitle("Haha");
+            // Optional: only add CSS if not already in the stylesheet list
+            String stylesheetPath = Objects.requireNonNull(getClass().getResource("/Styles/main.css")).toExternalForm();
+
+                newScene.getStylesheets().add(stylesheetPath);
+
+            currentStage.setScene(newScene);
             currentStage.show();
 
         } catch (IOException e) {

@@ -8,28 +8,34 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="628.0" prefWidth="956.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlfx.HelloController">
+<VBox alignment="CENTER" prefHeight="628.0" prefWidth="956.0" spacing="20.0" styleClass="main-background" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sqlfx.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Pane prefHeight="602.0" prefWidth="946.0">
-      <children>
-         <Label fx:id="crudPageLabel" layoutX="394.0" layoutY="14.0" prefHeight="24.0" prefWidth="129.0" text="Home " />
-         <TableView fx:id="myTable" layoutX="-4.0" layoutY="296.0" prefHeight="298.0" prefWidth="916.0" >
-           <columns>
-             <TableColumn fx:id="idCol" prefWidth="225.0" text="ID" />
-             <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="206.0" text="Name" />
-               <TableColumn fx:id="rankCol" prefWidth="215.0" text="Rank" />
-               <TableColumn fx:id="locationCol" prefWidth="269.0" text="Location" />
-           </columns>
-         </TableView>
-         <Label layoutY="6.0" prefHeight="24.0" prefWidth="66.0" text="Angkit Khadka" />
-         <Label layoutY="26.0" prefHeight="24.0" prefWidth="66.0" text="23058064" />
-         <Label layoutX="829.0" layoutY="9.0" text="Oct 18 2024" />
-         <Button layoutX="150.0" layoutY="204.0" mnemonicParsing="false" onAction="#onCreate" text="Create" />
-         <Button layoutX="458.0" layoutY="204.0" mnemonicParsing="false" onAction="#onUpdate" text="Update" />
-         <Button layoutX="294.0" layoutY="204.0" mnemonicParsing="false" onAction="#onRead" text="Read" />
-         <Button layoutX="635.0" layoutY="204.0" mnemonicParsing="false" onAction="#onDelete" text="Detele" />
-      </children>
-   </Pane>
+    <!-- Set the primary background for the main VBox -->
+    <Pane prefHeight="588.0" prefWidth="910.0" styleClass="main-background">
+        <children>
+            <!-- White text and larger font size for labels with label and white-bg-text classes -->
+            <Label fx:id="crudPageLabel" layoutX="394.0" layoutY="14.0" prefHeight="24.0" prefWidth="129.0" styleClass="label" text="Home" />
+            <TableView fx:id="myTable" layoutX="20.0" layoutY="296.0" prefHeight="298.0" prefWidth="916.0" styleClass="secondary-background">
+                <columns>
+                    <TableColumn fx:id="idCol" prefWidth="225.0" styleClass="white-bg-text" text="ID" />
+                    <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="206.0" styleClass="white-bg-text" text="Name" />
+                    <TableColumn fx:id="rankCol" prefWidth="215.0" styleClass="white-bg-text" text="Rank" />
+                    <TableColumn fx:id="locationCol" prefWidth="269.0" styleClass="white-bg-text" text="Location" />
+                </columns>
+            </TableView>
+
+            <!-- User info labels with white-bg-text for visibility on light pane background -->
+            <Label layoutY="6.0" prefHeight="24.0" prefWidth="110.0" styleClass="white-bg-text" text="Angkit Khadka" />
+            <Label layoutY="26.0" prefHeight="24.0" prefWidth="129.0" styleClass="white-bg-text" text="23058064" />
+            <Label layoutX="829.0" layoutY="9.0" styleClass="white-bg-text" text="Oct 18 2024" />
+
+            <!-- Buttons styled with the .button class -->
+            <Button layoutX="150.0" layoutY="204.0" mnemonicParsing="false" onAction="#onCreate" styleClass="button" text="Create" />
+            <Button layoutX="458.0" layoutY="204.0" mnemonicParsing="false" onAction="#onUpdate" styleClass="button" text="Update" />
+            <Button layoutX="294.0" layoutY="204.0" mnemonicParsing="false" onAction="#onRead" styleClass="button" text="Read" />
+            <Button layoutX="635.0" layoutY="204.0" mnemonicParsing="false" onAction="#onDelete" styleClass="button" text="Delete" />
+        </children>
+    </Pane>
 </VBox>
